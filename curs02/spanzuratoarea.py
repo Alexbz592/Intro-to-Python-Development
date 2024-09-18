@@ -6,3 +6,8 @@ for i in cuvant :
     else :
         cuvant_de_inlocuit = cuvant_de_inlocuit + i
 print (cuvant_de_inlocuit)
+while cuvant_de_inlocuit != cuvant :
+    caracter_cerut = input("Alege o litera: ")
+    print(caracter_cerut)
+    if caracter_cerut in cuvant :
+
