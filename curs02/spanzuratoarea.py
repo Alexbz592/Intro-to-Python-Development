@@ -6,8 +6,19 @@ for i in cuvant :
     else :
         cuvant_de_inlocuit = cuvant_de_inlocuit + i
 print (cuvant_de_inlocuit)
-while cuvant_de_inlocuit != cuvant :
+nr_vieti = 3
+while cuvant_de_inlocuit != cuvant and nr_vieti != 0 :
     caracter_cerut = input("Alege o litera: ")
-    print(caracter_cerut)
     if caracter_cerut in cuvant :
-
+        lista_cuvant_de_inlocuit = list(cuvant_de_inlocuit)
+        for i, v in enumerate(cuvant) :
+            if v == caracter_cerut :
+                lista_cuvant_de_inlocuit[i] = caracter_cerut
+        cuvant_de_inlocuit = "".join(lista_cuvant_de_inlocuit)
+    else :
+        nr_vieti -= 1
+    print(cuvant_de_inlocuit)
+    if nr_vieti != 0 :
+        print(f"Mai ai {nr_vieti} vieti")
+if nr_vieti == 0 :
+    print(f"Ai pierdut! Cuvantul era: {cuvant}")
